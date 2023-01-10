@@ -1,0 +1,222 @@
+// <SafeAreaView style={[GlobalStyles.droidSafeArea2]}>
+//       <KeyboardAwareScrollView style={styles.container}>
+//         <View style={styles.wrapContent}>
+//           <View style={styles.contentHeder}>
+//             <Text style={[styles.txtTitleHeader, { fontSize: 30 }]}>
+//               Alo 💌
+//             </Text>
+//             <Text style={styles.txtTitleHeaderSub}>Kết nối để yêu thương</Text>
+//           </View>
+//           <View style={styles.contentLogin}>
+//             <View style={styles.childContentLogin}>
+//               <View style={styles.aboveFormLogin}>
+//                 <Text style={[styles.txtTitleHeader, { color: "black" }]}>
+//                   Đăng nhập
+//                 </Text>
+//                 <Text
+//                   style={[
+//                     styles.txtTitleHeaderSub,
+//                     { color: "black", opacity: 0.5 },
+//                   ]}
+//                 >
+//                   Đăng nhập để tiếp tục sử dụng Alo
+//                 </Text>
+//               </View>
+//               <View style={styles.mainFormLogin}>
+//                 <View style={styles.wrapNumberPhone}>
+//                   <Text style={styles.txtOfInput}>Số điện thoại</Text>
+//                   <TextInput
+//                     style={styles.input}
+//                     keyboardType="numeric"
+//                     placeholder="Nhập số điện thoại"
+//                   />
+//                 </View>
+//                 <View style={styles.wrapPassword}>
+//                   <Text style={styles.txtOfInput}>Mật khẩu</Text>
+//                   <TextInput
+//                     style={styles.input}
+//                     secureTextEntry={true}
+//                     placeholder="Nhập mật khẩu"
+//                   />
+//                 </View>
+//                 <View style={styles.wrapDiff}>
+//                   <View style={styles.checkBoxRememberPassWord}>
+//                     <BouncyCheckbox
+//                       size={16}
+//                       text="Nhớ mật khẩu"
+//                       fillColor="#4eac6d"
+//                       unfillColor="#FFFFFF"
+//                       textStyle={{
+//                         textDecorationLine: "none",
+//                         marginLeft: -10,
+//                       }}
+//                       iconStyle={{ borderColor: "#4eac6d" }}
+//                       innerIconStyle={{ borderWidth: 2 }}
+//                     />
+//                   </View>
+//                   <TouchableOpacity style={styles.forgetPassword}>
+//                     <Text>Quên mật khẩu ?</Text>
+//                   </TouchableOpacity>
+//                 </View>
+//                 <View style={styles.wrapBtnLogin}>
+//                   <TouchableOpacity style={styles.btnLogin}>
+//                     <Text
+//                       style={{
+//                         fontSize: 16,
+//                         color: "white",
+//                         fontWeight: "500",
+//                         textAlign: "center",
+//                       }}
+//                     >
+//                       Đăng Nhập
+//                     </Text>
+//                   </TouchableOpacity>
+//                 </View>
+//                 <View style={styles.dontHaveAccount}>
+//                   <Text style={styles.useAllText16}>
+//                     Bạn chưa có tài khoản ?
+//                   </Text>
+//                   <TouchableOpacity>
+//                     <Text
+//                       style={[
+//                         styles.useAllText16,
+//                         {
+//                           color: "#4eac6d",
+//                           fontWeight: "800",
+//                           textDecorationLine: "underline",
+//                         },
+//                       ]}
+//                     >
+//                       {" "}
+//                       Đăng ký
+//                     </Text>
+//                   </TouchableOpacity>
+//                 </View>
+//               </View>
+//               <View style={styles.footerFormLogin}>
+//                 <Text style={[{ fontWeight: "900", textAlign: "center" }]}>
+//                   © 2022 Alo. Thiết kế bởi CDNTV
+//                 </Text>
+//               </View>
+//             </View>
+//           </View>
+//         </View>
+//       </KeyboardAwareScrollView>
+//     </SafeAreaView>
+
+
+//     useAllText16: {
+//     fontSize: 16,
+//   },
+
+//   wrapContent: {
+//     flex: 1,
+//     padding: 24,
+//   },
+
+//   contentHeder: {
+//     flex: 2,
+//     alignItems: "center",
+//     height: "20%",
+//     flexGrow: 2,
+//   },
+
+//   contentLogin: {
+//     flex: 1,
+//     flexGrow: 8,
+//     backgroundColor: "white",
+//     borderRadius: 20,
+//     padding: 24,
+//     height: "80%",
+//   },
+
+//   txtTitleHeader: {
+//     color: "white",
+//     fontSize: 24,
+//     fontWeight: "700",
+//   },
+
+//   txtTitleHeaderSub: {
+//     color: "white",
+//     opacity: 0.8,
+//     fontSize: 16,
+//     marginTop: 5,
+//     textAlign: "center",
+//   },
+
+//   childContentLogin: {
+//     flex: 1,
+//     // paddingTop: 24,
+//   },
+
+//   aboveFormLogin: {
+//     flex: 1,
+//     flexGrow: 2,
+//     alignItems: "center",
+//     textAlign: "center",
+//     backgroundColor: "blue",
+//   },
+
+//   mainFormLogin: {
+//     flex: 1,
+//     backgroundColor: "violet",
+//     flexGrow: 6,
+//   },
+
+//   footerFormLogin: {
+//     flex: 1,
+//     justifyContent: "flex-end",
+//     alignItems: "center",
+//     backgroundColor: "pink",
+//     flexGrow: 1,
+//   },
+
+//   wrapNumberPhone: {
+//     marginBottom: 24,
+//   },
+
+//   input: {
+//     borderWidth: 1,
+//     borderColor: "grey",
+//     padding: 10,
+//     borderRadius: 5,
+//   },
+
+//   txtOfInput: {
+//     color: "#000",
+//     fontSize: 16,
+//     fontWeight: "700",
+//     marginBottom: 10,
+//   },
+
+//   wrapDiff: {
+//     flex: 1,
+//     // marginTop: 10,
+//     flexDirection: "row",
+//     alignItems: "center",
+//     justifyContent: "space-between",
+//   },
+
+//   checkBoxRememberPassWord: {
+//     flexDirection: "row",
+//     alignItems: "center",
+//   },
+
+//   wrapBtnLogin: {
+//     flex: 1,
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+
+//   btnLogin: {
+//     paddingVertical: 10,
+//     width: "100%",
+//     backgroundColor: "#4eac6d",
+//   },
+
+//   dontHaveAccount: {
+//     flex: 1,
+//     flexDirection: "row",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },

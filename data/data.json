@@ -1,0 +1,10 @@
+{
+    "data" :
+        [
+            {"id":"1", "name":"Nguyen Thanh Nhan", "avatar":"../data/img/1.jpeg"},
+            {"id":"2", "name":"Nguyen Van A", "avatar":"../data/img/2.png"},
+            {"id":"3", "name":"Tran Thi B", "avatar":"../data/img/3.jpeg"},
+            {"id":"4", "name":"Phan Van C", "avatar":"../data/img/4.png"},
+            {"id":"5", "name":"Pham Thi D", "avatar":"../data/img/5.jpeg"}
+        ]
+}
