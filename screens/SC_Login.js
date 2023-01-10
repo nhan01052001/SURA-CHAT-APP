@@ -27,6 +27,8 @@ import { ApiUser } from "../api/ApiUser";
 import { ApiProfile } from "../api/ApiUser";
 import { LinearGradient } from "expo-linear-gradient";
 import { isValidNumberPhone, isValidPassword } from "../utils/validations";
+import Modal from "react-native-modal";
+import LoadingCircle from "../components/LoadingCircle";
 
 const window = Dimensions.get("window");
 const screen = Dimensions.get("screen");
@@ -35,7 +37,7 @@ const SC_Login = ({ navigation }) => {
   const [dimensions, setDimensions] = useState({ window, screen });
   const { passwordVisibility, rightIcon, handlePasswordVisibility } =
     useTogglePasswordVisibility();
-
+  const [isLoadingLogin, setIsLoadingLogin] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -88,6 +90,7 @@ const SC_Login = ({ navigation }) => {
   }, []);
 
   const handleLogin = async () => {
+    setIsLoadingLogin(true);
     const data = {
       username,
       password,
@@ -121,6 +124,7 @@ const SC_Login = ({ navigation }) => {
       Alert.alert(error);
     }
     // navigation.replace("BottomTabsNavigator");
+    setIsLoadingLogin(false);
   };
 
   useEffect(() => {
@@ -297,7 +301,7 @@ const SC_Login = ({ navigation }) => {
                   </Pressable>
                 </View>
                 <TouchableOpacity style={styles.forgetPassword}>
-                  <Text style={{ fontSize: 16 }}>Quên mật khẩu ?</Text>
+                  <Text style={{ fontSize: 16 }}>Quên mật khẩu?</Text>
                 </TouchableOpacity>
               </View>
 
@@ -376,6 +380,26 @@ const SC_Login = ({ navigation }) => {
               </Text>
             </View>
           </View>
+        </View>
+        {/* modal loading */}
+        <View>
+          <Modal
+            isVisible={isLoadingLogin}
+            onBackdropPress={() => setIsLoadingLogin(false)}
+            style={{ alignItems: "center", justifyContent: "center" }}
+          >
+            <View
+              style={{
+                width: "100%",
+                height: "100%",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {/* <LoadingCircle /> */}
+              <LoadingCircle />
+            </View>
+          </Modal>
         </View>
       </KeyboardAwareScrollView>
     </LinearGradient>
